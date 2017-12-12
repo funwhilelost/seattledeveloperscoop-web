@@ -21,7 +21,7 @@ const Header = () => (
             Seattle Developer&apos;s Co-op
           </Link>
         </h1>
-        <p>Image with CSS clip-path</p>
+        <p>Real, sustainable software</p>
       </figcaption>
     </figure>
   </div>
