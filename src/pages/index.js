@@ -32,9 +32,10 @@ const IndexPage = () => (
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
+
+      className="content"
     >
-      <h2>What we do</h2>
-      <p>A collective of web developers empowering people with technology.  We
+      <p>We&apos;re a collective of web developers empowering people with technology.  We
       don&apos;t seek unicorns, we <a href="https://medium.com/@sexandstartups/zebrasfix-c467e55f9d96">
       build zebras</a>.  We care about sustainable work for everyone and
       favor cooperation over competition.</p>

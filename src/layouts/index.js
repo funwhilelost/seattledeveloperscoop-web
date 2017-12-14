@@ -13,6 +13,14 @@ const Header = () => (
   </div>
 )
 
+const Footer = () => (
+  <div className="footer">
+    <div className="footer__contents">
+      <a href="mailto:hello@seattledevelopers.coop">Email Us</a>
+    </div>
+  </div>
+)
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -24,6 +32,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     {children()}
+    <Footer />
   </div>
 )
 

@@ -1,6 +1,14 @@
 @import "reset";
+
+$color-pink: #e22db5;
+$color-blue: #7db9e8;
+
 @import "typography";
 @import "mixins";
+
+body {
+  min-width: 320px;
+}
 
 .header {
   position: absolute;
@@ -29,7 +37,7 @@
     width: 100%;
     height: 300px;
     background-color: #e22db5; // Old browsers
-    @include linear-gradient(#e22db5,#7db9e8);
+    @include linear-gradient($color-pink, $color-blue);
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   }
 
@@ -63,8 +71,35 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: 28px;
     font-weight: 300;
     margin-top: 0.5em;
+  }
+}
+
+.content {
+  a {
+    color: $color-blue;
+    text-decoration: none;
+    padding: 2px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+
+  &__contents {
+    margin: 0 auto;
+    max-width: 780px;
+    padding: 1rem 1.0875rem 1.45rem;
+
+    font-family: Arial, sans;
+
+    a {
+      text-decoration: none;
+      color: $color-pink;
+    }
   }
 }
