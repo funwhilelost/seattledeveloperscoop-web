@@ -16,10 +16,12 @@ const IndexPage = () => (
                 textDecoration: 'none',
               }}
             >
-              Seattle Developer&apos;s Co-op
+              Seattle<br />
+              Developer&apos;s<br />
+              Co-op
             </Link>
           </h1>
-          <p>Real, sustainable software</p>
+          {/* <p>Real, sustainable web</p> */}
         </figcaption>
         <div className="scanlines" />
       </figure>
@@ -40,14 +42,14 @@ const IndexPage = () => (
       build zebras</a>.  We care about sustainable work for everyone and
       favor cooperation over competition.</p>
 
-      <p>We believe in worker-ownership and democracy at work.</p>
-
       {/* <Link to="/page-2/">Go to page 2</Link> */}
 
       <h2>Who we are</h2>
       <p>Alex</p>
       <p>Andy</p>
       <p>Morgen</p>
+
+      <p>We believe in worker-ownership and democracy at work.</p>
 
       {/*
       <h2>Seven Cooperative Principles</h2>
