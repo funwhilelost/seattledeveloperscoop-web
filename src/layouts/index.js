@@ -16,7 +16,10 @@ const Header = () => (
 const Footer = () => (
   <div className="footer">
     <div className="footer__contents">
-      <a href="mailto:hello@seattledevelopers.coop">Email Us</a>
+      <ul className="footer__social">
+        <li><a href="mailto:hello@seattledevelopers.coop">Email Us</a></li>
+        <li><a href="https://twitter.com/seattledevcoop">@seattledevcoop</a></li>
+      </ul>
     </div>
   </div>
 )
