@@ -118,15 +118,21 @@ body {
 
   &__pull-quote {
     float: right;
-    width: 200px;
+    width: 20rem;
     /* background: url(images/openquote.gif) top left no-repeat; */
     color: #030;
-    font-size: 26px;
-    line-height: 0.9;
     font-style: italic;
     padding: 13px;
 
-    blockquote { margin: 0; }
+    blockquote {
+      margin: 0;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 0.9;
+      text-align: right;
+    }
 
     /* p:first-letter { font-size: 1.8rem; } */
   }
