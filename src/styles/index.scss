@@ -1,5 +1,6 @@
 @import "reset";
 @import "typography";
+@import "mixins";
 
 .header {
   position: absolute;
@@ -16,20 +17,33 @@
   }
 }
 
-.hero img {
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-}
-
 .hero {
   color: #fff;
   font-family: 'Fira Sans', sans-serif;
   position: relative;
   text-align: center;
   text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+  overflow: hidden;
+
+  .gradient {
+    width: 100%;
+    height: 300px;
+    background-color: #e22db5; // Old browsers
+    @include linear-gradient(#e22db5,#7db9e8);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+
+  .scanlines {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    @include scanlines(#FFF, 1px, 0deg, 0.3);
+  }
 
   img {
     width: 100%;
     height: 300px;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   }
 
   figcaption {
@@ -41,7 +55,11 @@
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 64px;
+
+    a {
+      @include textGlitch("example-one", 17, white, black, red, blue, 450, 115);
+    }
   }
 
   p {

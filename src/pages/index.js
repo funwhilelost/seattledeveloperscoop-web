@@ -5,7 +5,8 @@ const IndexPage = () => (
   <div className="home_page">
     <div className="hero">
       <figure>
-        <img src="https://unsplash.it/1600/900?image=830" alt="" />
+        {/* <img src="https://unsplash.it/1600/900?image=830" alt="" /> */}
+        <div className="gradient" />
         <figcaption>
           <h1 style={{ margin: 0 }}>
             <Link
@@ -20,6 +21,7 @@ const IndexPage = () => (
           </h1>
           <p>Real, sustainable software</p>
         </figcaption>
+        <div className="scanlines" />
       </figure>
     </div>
 
