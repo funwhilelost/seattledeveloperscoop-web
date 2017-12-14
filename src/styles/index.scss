@@ -100,6 +100,11 @@ body {
 }
 
 .content {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
   a {
     color: $color-blue;
     text-decoration: none;
@@ -109,6 +114,21 @@ body {
   h2 {
     font-size: 1.2rem;
     text-transform: uppercase;
+  }
+
+  &__pull-quote {
+    float: right;
+    width: 200px;
+    /* background: url(images/openquote.gif) top left no-repeat; */
+    color: #030;
+    font-size: 26px;
+    line-height: 0.9;
+    font-style: italic;
+    padding: 13px;
+
+    blockquote { margin: 0; }
+
+    /* p:first-letter { font-size: 1.8rem; } */
   }
 }
 

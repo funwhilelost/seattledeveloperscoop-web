@@ -44,6 +44,21 @@ const IndexPage = () => (
 
       {/* <Link to="/page-2/">Go to page 2</Link> */}
 
+      <h2>What we offer</h2>
+
+      <aside className="content__pull-quote">
+        <blockquote>
+          <p>We make the web work for you.</p>
+        </blockquote>
+      </aside>
+
+      <p>We make the web work for you.  We&apos;re experts on WordPress and a whole
+      host of tools to help you collaborate and reach your audience on the
+      web.</p>
+
+      <p>We also offer full-stack development of custom web applications, APIs,
+      and cloud-connected tools for your company.</p>
+
       <h2>Who we are</h2>
       <p>Alex</p>
       <p>Andy</p>
