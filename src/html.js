@@ -51,7 +51,7 @@ module.exports = class HTML extends React.Component {
 function buildPiwikSetup({ url, id }) {
   const html = `
     var paq = window._paq = window._paq || [];
-    paq.push(['setTrackerUrl', '${url}/piwik/']);
+    paq.push(['setTrackerUrl', '${url}/piwik/piwik.php']);
     paq.push(['setSiteId', '${id}']);
     paq.push(['enableLinkTracking']);
     paq.push(['trackPageView']);
