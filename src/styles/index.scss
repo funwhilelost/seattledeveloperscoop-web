@@ -116,9 +116,13 @@ body {
     text-transform: uppercase;
   }
 
+  h3 {
+    font-size: 1.1rem;
+  }
+
   &__pull-quote {
     float: right;
-    width: 20rem;
+    width: 18rem;
     /* background: url(images/openquote.gif) top left no-repeat; */
     color: #030;
     font-style: italic;
@@ -132,9 +136,14 @@ body {
       font-size: 2rem;
       line-height: 0.9;
       text-align: right;
+      /* &:first-letter { font-size: 1.8rem; } */
     }
 
-    /* p:first-letter { font-size: 1.8rem; } */
+    @media only screen and (max-width: 760px) {
+      width: 12rem;
+      p { font-size: 1.3rem; }
+    }
+
   }
 
   &__member {
@@ -153,6 +162,18 @@ body {
     height: 180px;
     border-radius: 50%;
   }
+
+  @media only screen and (max-width: 760px) {
+    &__member {
+      margin: 1.5rem;
+    }
+
+    &__member-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
 }
 
 .footer {

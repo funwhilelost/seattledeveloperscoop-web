@@ -56,8 +56,8 @@ const IndexPage = () => (
     >
       <p>We&apos;re a collective of web developers empowering people with technology.  We
       don&apos;t seek unicorns, we <a href="https://medium.com/@sexandstartups/zebrasfix-c467e55f9d96">
-      build zebras</a>.  We care about sustainable work for everyone and
-      favor cooperation over competition.</p>
+      build zebras</a>.  Good, sustainable work, democracy in the workplace,
+      and cooperation are our core values.</p>
 
       {/* <Link to="/page-2/">Go to page 2</Link> */}
 
@@ -69,12 +69,9 @@ const IndexPage = () => (
         </blockquote>
       </aside>
 
-      <p>We make the web work for you.  We&apos;re experts on WordPress and a whole
-      host of tools to help you collaborate and reach your audience on the
-      web.</p>
-
-      <p>We also offer full-stack development of custom web applications, APIs,
-      and cloud-connected tools for your company.</p>
+      <p>We make the web work for you - with 15 years experience in cultivating
+      well-crafted, maintainable code.  Whether it&apos;s WordPress or the
+      latest React app we&apos;re here to see your vision through to the end.</p>
 
       <h2>Who we are</h2>
 
