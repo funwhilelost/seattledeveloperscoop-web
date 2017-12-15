@@ -136,6 +136,23 @@ body {
 
     /* p:first-letter { font-size: 1.8rem; } */
   }
+
+  &__member {
+    display: inline-block;
+    margin: 3.2rem;
+  }
+
+  &__member-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+  }
+
+  &__member-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
 }
 
 .footer {
@@ -160,5 +177,11 @@ body {
     margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    display: inline;
   }
 }

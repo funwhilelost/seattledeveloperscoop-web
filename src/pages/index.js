@@ -1,6 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import alexImage from '../images/alex.jpg'
+import andyImage from '../images/andy.jpg'
+
+{/* https://simpleicons.org/ */}
+import githubIcon from '../icons/github.svg'
+
+const Member = ({ name, github, image }) => (
+  <div className="content__member">
+    <h3>{name}</h3>
+    {/* https://www.gatsbyjs.org/packages/gatsby-image/ */}
+    <img src={image} alt={`${name} Profile Image`} className="content__member-image" />
+    <a href={github}>
+      <img className="content__member-icon" src={githubIcon} />
+    </a>
+  </div>
+)
+
 const IndexPage = () => (
   <div className="home_page">
     <div className="hero">
@@ -60,9 +77,20 @@ const IndexPage = () => (
       and cloud-connected tools for your company.</p>
 
       <h2>Who we are</h2>
-      <p>Alex</p>
-      <p>Andy</p>
-      <p>Morgen</p>
+
+      <Member
+        name="Andy Jacobs"
+        github="https://github.com/funwhilelost"
+        image={andyImage}
+      />
+
+      <Member
+        name="Alex Hartle"
+        github="https://github.com/alexhartle"
+        image={alexImage}
+      />
+
+      {/* <p>Morgen</p> */}
 
       <p>We believe in worker-ownership and democracy at work.</p>
 
