@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
+import morgenImage from '../images/morgen.jpg'
 
 {/* https://simpleicons.org/ */}
 import githubIcon from '../icons/github.svg'
@@ -78,13 +79,22 @@ const IndexPage = () => (
       <Member
         name="Andy Jacobs"
         github="https://github.com/funwhilelost"
+        linkedin="https://www.linkedin.com/in/andyjacobs"
         image={andyImage}
       />
 
       <Member
         name="Alex Hartle"
         github="https://github.com/alexhartle"
+        linkedin=""
         image={alexImage}
+      />
+
+      <Member
+        name="Morgen Fett"
+        github="https://github.com/morgen-montgomery"
+        linkedin="https://www.linkedin.com/in/morgen-fett/"
+        image={morgenImage}
       />
 
       {/* <p>Morgen</p> */}
