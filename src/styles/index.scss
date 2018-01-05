@@ -100,6 +100,10 @@ body {
 }
 
 .content {
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 0px 1.0875rem 1.45rem;
+
   p {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -148,32 +152,49 @@ body {
 
   &__member {
     display: inline-block;
-    margin: 3.2rem;
+    width: 21%;
+    padding: 2%;
   }
 
-  &__member-icon {
+  &__member-related {
+    text-align: center;
+  }
+
+  &__member-link {
+    display: inline-block;
+    margin: 6px;
     width: 32px;
     height: 32px;
-    display: block;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__member-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 50%;
+    position: relative;
+    height: 0px;
+    margin-bottom: 50%;
+
+    > img {
+      width: 100%;
+      position: absolute;
+      border-radius: 50%;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    }
   }
 
   @media only screen and (max-width: 760px) {
-    &__member {
-      margin: 1.5rem;
-    }
-
-    &__member-image {
-      width: 120px;
-      height: 120px;
+    &__member-link {
+      display: inline-block;
+      margin: 5%;
+      width: 30%;
+      height: 30%;
     }
   }
-
 }
 
 .footer {

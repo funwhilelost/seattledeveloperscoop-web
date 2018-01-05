@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "seattldeveloperscoop-web",
+  "description": "Seattle Developers Cooperative Website",
+  "version": "0.1.0",
+  "author": "Andy Jacobs <andy@seattledevelopers.coop>",
   "dependencies": {
     "gatsby": "^1.9.127",
     "gatsby-link": "^1.6.30",

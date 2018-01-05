@@ -7,8 +7,6 @@
 module.exports = {
   siteMetadata: {
     title: 'Seattle Developer\'s Co-op',
-    piwikSiteId: '1',
-    piwikUrl: '//piwik.seattledevelopers.coop/piwik/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

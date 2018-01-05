@@ -4,24 +4,29 @@ import Link from 'gatsby-link'
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
 import morgenImage from '../images/morgen.jpg'
+import skylerImage from '../images/skyler.jpg'
 
 {/* https://simpleicons.org/ */}
 import githubIcon from '../icons/github.svg'
+import linkedinIcon from '../icons/linkedin.svg'
 
-const Member = ({ name, github, image }) => (
+const Member = ({ name, github, image, linkedin }) => (
   <div className="content__member">
     <h3>{name}</h3>
-    {/* https://www.gatsbyjs.org/packages/gatsby-image/ */}
-    <img src={image} alt={`${name} Profile Image`} className="content__member-image" />
-    <a href={github}>
-      <img className="content__member-icon" src={githubIcon} />
-    </a>
+    {/* see: https://www.gatsbyjs.org/packages/gatsby-image/ */}
+    <div className="content__member-image">
+      <img src={image} alt={`${name} Profile Image`} />
+    </div>
+    <aside className="content__member-related">
+      <a className="content__member-link" href={github}><img src={githubIcon} /></a>
+      <a className="content__member-link" href={linkedin}><img src={linkedinIcon} /></a>
+    </aside>
   </div>
 )
 
 const IndexPage = () => (
-  <div className="home_page">
-    <div className="hero">
+  <article className="home_page">
+    <section className="hero">
       <figure>
         {/* <img src="https://unsplash.it/1600/900?image=830" alt="" /> */}
         <div className="gradient" />
@@ -43,21 +48,12 @@ const IndexPage = () => (
         </figcaption>
         <div className="scanlines" />
       </figure>
-    </div>
+    </section>
 
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 780,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-
-      className="content"
-    >
+    <section className="content">
       <p>We&apos;re a collective of web developers empowering people with technology.  We
       don&apos;t seek unicorns, we <a href="https://medium.com/@sexandstartups/zebrasfix-c467e55f9d96">
-      build zebras</a>.  Good, sustainable work, democracy in the workplace,
+      build zebras</a>.  Good work, democracy in the workplace,
       and cooperation are our core values.</p>
 
       {/* <Link to="/page-2/">Go to page 2</Link> */}
@@ -86,7 +82,7 @@ const IndexPage = () => (
       <Member
         name="Alex Hartle"
         github="https://github.com/alexhartle"
-        linkedin=""
+        linkedin="https://www.linkedin.com/in/alex-hartle/"
         image={alexImage}
       />
 
@@ -97,7 +93,12 @@ const IndexPage = () => (
         image={morgenImage}
       />
 
-      {/* <p>Morgen</p> */}
+      <Member
+        name="Skyler Hartle"
+        github="https://github.com/skylerah"
+        linkedin="https://www.linkedin.com/in/skylerhartle/"
+        image={skylerImage}
+      />
 
       <p>We believe in worker-ownership and democracy at work.</p>
 
@@ -113,8 +114,8 @@ const IndexPage = () => (
         <li>Concern for Community</li>
       </ul>
       */}
-    </div>
-  </div>
+    </section>
+  </article>
 )
 
 export default IndexPage
