@@ -30,20 +30,22 @@ const Footer = () => (
   </div>
 )
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    {children()}
-    <Footer />
-  </div>
+const TemplateWrapper = ({ data, children }) => {
+  return (
+    <div>
+      <Helmet
+        title="Seattle Developer's Cooperative"
+        meta={[
+          { name: 'description', content: 'Great web developers providing fast, effective, and robust websites' },
+          { name: 'keywords', content: 'web developer, developers, react, javascript, seattle, cooperative' },
+        ]}
+      />
+      <Header />
+      {children()}
+      <Footer />
+    </div>
 )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

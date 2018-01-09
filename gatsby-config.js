@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Seattle Developer\'s Co-op',
+    title: 'Seattle Developer\'s Cooperative',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
