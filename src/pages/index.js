@@ -5,7 +5,6 @@ import Member from '../components/Member'
 
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
-import morgenImage from '../images/morgen.jpg'
 import skylerImage from '../images/skyler.jpg'
 
 class IndexPage extends React.Component {
@@ -73,6 +72,7 @@ class IndexPage extends React.Component {
             name="Andy Jacobs"
             github="https://github.com/funwhilelost"
             linkedin="https://www.linkedin.com/in/andyjacobs"
+            mastodon="https://social.coop/@funwhilelost"
             image={andyImage}
           />
 
@@ -81,13 +81,6 @@ class IndexPage extends React.Component {
             github="https://github.com/alexhartle"
             linkedin="https://www.linkedin.com/in/alex-hartle/"
             image={alexImage}
-          />
-
-          <Member
-            name="Morgen Fett"
-            github="https://github.com/morgen-montgomery"
-            linkedin="https://www.linkedin.com/in/morgen-fett/"
-            image={morgenImage}
           />
 
           <Member
