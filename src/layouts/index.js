@@ -23,9 +23,9 @@ const Footer = () => (
     <div className="footer__contents">
       <ul className="footer__social">
         <li><a href="mailto:hello@seattledevelopers.coop"><img src={emailIcon} className="footer__icon" /> Email Us</a></li>
-        <li><a href="https://twitter.com/seattledevcoop"><img src={twitterIcon} className="footer__icon" />  @seattledevcoop</a></li>
+        {/* <li><a href="https://twitter.com/seattledevcoop"><img src={twitterIcon} className="footer__icon" />  @seattledevcoop</a></li> */}
         <li><a href="https://github.com/SeattleDevelopersCoop/"><img src={githubIcon} className="footer__icon" /> Github</a></li>
-        <li><Link to="/blog">Blog</Link></li>
+        {/* <li><Link to="/blog">Blog</Link></li> */}
       </ul>
     </div>
   </div>
