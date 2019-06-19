@@ -4,13 +4,15 @@
   "version": "0.1.0",
   "author": "Andy Jacobs <andy@seattledevelopers.coop>",
   "dependencies": {
-    "gatsby": "^1.9.127",
-    "gatsby-link": "^1.6.30",
+    "gatsby": "^2.9.7",
+    "gatsby-plugin-google-analytics": "^2.0.21",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.14",
-    "gatsby-plugin-sitemap": "^1.2.9",
-    "gatsby-source-filesystem": "^1.5.11",
-    "gatsby-transformer-remark": "^1.7.26"
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-source-filesystem": "^2.0.41",
+    "gatsby-transformer-remark": "^2.4.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "keywords": [
     "gatsby"
