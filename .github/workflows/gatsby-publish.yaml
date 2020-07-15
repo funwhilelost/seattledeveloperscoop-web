@@ -1,0 +1,39 @@
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+      - name: Build
+        run: yarn run build
+        env:
+          GATSBY_ENV: "prod"
+#          GHOST_API_URL: "https://ghost.nehalist.io"
+#          GHOST_CONTENT_API_KEY: ${{ secrets.ghost_content_api_key }}
+#          GATSBY_CARRAWAY_URL: "https://carraway.nehalist.io"
+#          GATSBY_COMMENTO_URL: "http://comments.nehalist.io"
+#          GA_TRACKING_ID: "UA-40873708-1"
+      - name: Deploy to Dreamhost
+        uses: AEnterprise/rsync-deploy@v1.0
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          ARGS: "-e -c -r --delete"
+          SERVER_PORT: 22
+          FOLDER: "public/"
+          SERVER_IP: alsea.dreamhost.com
+          USERNAME: seattledeveloperscoop
+          SERVER_DESTINATION: /home/seattledeveloperscoop/seattledevelopers.coop
+
