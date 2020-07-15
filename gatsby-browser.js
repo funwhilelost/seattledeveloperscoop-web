@@ -1,5 +1,3 @@
-/* eslint-disable import/no-commonjs, immutable/no-let, thehelp/no-mutation, thehelp/no-array-mutation */
-
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
