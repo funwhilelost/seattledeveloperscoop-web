@@ -69,7 +69,12 @@ export const IndexPage = ({ children }) => (
               { name: 'keywords', content: keywords },
               { property: 'og:image', content: `${siteUrl}${logoImage}`}
             ]}
-          />
+          >
+            <link
+              rel="apple-touch-icon"
+              href={`${siteUrl}${logoImage}`}
+            />
+          </Helmet>
           <Header />
           <article className="home_page">
             <Helmet
