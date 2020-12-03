@@ -55,6 +55,7 @@ export const IndexPage = ({ children }) => (
       // data is injected automatically from the 'pageQuery' defined below
       const { site: { siteMetadata: {
         title,
+        // @TODO - https://www.gatsbyjs.com/docs/environment-variables/
         siteUrl,
         description,
         keywords
@@ -62,8 +63,9 @@ export const IndexPage = ({ children }) => (
 
       return (
         <div>
+          {/* https://github.com/nfl/react-helmet#example */}
           <Helmet
-            title={ title } //"Seattle Developer's Cooperative"
+            title={ title }
             meta={[
               { name: 'description', content: description },
               { name: 'keywords', content: keywords },
