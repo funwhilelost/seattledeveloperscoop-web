@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+import logoImage from '../images/sdc.png'
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
 import skylerImage from '../images/skyler.jpg'
@@ -43,21 +44,30 @@ export const IndexPage = ({ children }) => (
         site {
           siteMetadata {
             title
+            siteUrl
+            description
+            keywords
           }
         }
       }
     `}
     render={data => {
       // data is injected automatically from the 'pageQuery' defined below
-      const { site: { siteMetadata: { title }}} = data
+      const { site: { siteMetadata: {
+        title,
+        siteUrl,
+        description,
+        keywords
+      }}} = data
 
       return (
         <div>
           <Helmet
-            title="Seattle Developer's Cooperative"
+            title={ title } //"Seattle Developer's Cooperative"
             meta={[
-              { name: 'description', content: 'Great web developers providing fast, effective, and robust websites' },
-              { name: 'keywords', content: 'web developer, developers, react, javascript, seattle, cooperative' },
+              { name: 'description', content: description },
+              { name: 'keywords', content: keywords },
+              { property: 'og:image', content: `${siteUrl}${logoImage}`}
             ]}
           />
           <Header />
