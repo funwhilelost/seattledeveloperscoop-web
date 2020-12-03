@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+import logoImage from '../images/sdc.png'
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
 import skylerImage from '../images/skyler.jpg'
@@ -43,23 +44,39 @@ export const IndexPage = ({ children }) => (
         site {
           siteMetadata {
             title
+            siteUrl
+            description
+            keywords
           }
         }
       }
     `}
     render={data => {
       // data is injected automatically from the 'pageQuery' defined below
-      const { site: { siteMetadata: { title }}} = data
+      const { site: { siteMetadata: {
+        title,
+        // @TODO - https://www.gatsbyjs.com/docs/environment-variables/
+        siteUrl,
+        description,
+        keywords
+      }}} = data
 
       return (
         <div>
+          {/* https://github.com/nfl/react-helmet#example */}
           <Helmet
-            title="Seattle Developer's Cooperative"
+            title={ title }
             meta={[
-              { name: 'description', content: 'Great web developers providing fast, effective, and robust websites' },
-              { name: 'keywords', content: 'web developer, developers, react, javascript, seattle, cooperative' },
+              { name: 'description', content: description },
+              { name: 'keywords', content: keywords },
+              { property: 'og:image', content: `${siteUrl}${logoImage}`}
             ]}
-          />
+          >
+            <link
+              rel="apple-touch-icon"
+              href={`${siteUrl}${logoImage}`}
+            />
+          </Helmet>
           <Header />
           <article className="home_page">
             <Helmet
