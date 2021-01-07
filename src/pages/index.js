@@ -7,6 +7,7 @@ import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
 import skylerImage from '../images/skyler.jpg'
 import mikeImage from '../images/mike.jpg'
+import inkImage from '../images/ink.jpg'
 import Member from '../components/Member'
 
 import '../styles/index.scss'
@@ -156,6 +157,13 @@ export const IndexPage = ({ children }) => (
                 github="https://github.com/mikelyons"
                 linkedin="https://www.linkedin.com/in/mrlyons/"
                 image={mikeImage}
+              />
+
+              <Member
+                name="Ink Brownell"
+                github="https://github.com/InkBrownell"
+                linkedin="https://www.linkedin.com/in/ink-brownell-39146b160/"
+                image={inkImage}
               />
 
               <p>We believe in worker-ownership and democracy at work.</p>
