@@ -7,7 +7,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Seattle Developer\'s Cooperative',
-    siteUrl: 'https://www.seattledevelopers.coop'
+    siteUrl: 'https://www.seattledevelopers.coop',
+    description: 'Great web developers providing fast, effective, and robust websites',
+    keywords: 'web developer, developers, react, javascript, seattle, cooperative'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

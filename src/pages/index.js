@@ -2,10 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+import logoImage from '../images/sdc.png'
 import alexImage from '../images/alex.jpg'
 import andyImage from '../images/andy.jpg'
 import skylerImage from '../images/skyler.jpg'
 import mikeImage from '../images/mike.jpg'
+import inkImage from '../images/ink.jpg'
+import morgenImage from '../images/morgen.jpg'
 import Member from '../components/Member'
 
 import '../styles/index.scss'
@@ -43,23 +46,39 @@ export const IndexPage = ({ children }) => (
         site {
           siteMetadata {
             title
+            siteUrl
+            description
+            keywords
           }
         }
       }
     `}
     render={data => {
       // data is injected automatically from the 'pageQuery' defined below
-      const { site: { siteMetadata: { title }}} = data
+      const { site: { siteMetadata: {
+        title,
+        // @TODO - https://www.gatsbyjs.com/docs/environment-variables/
+        siteUrl,
+        description,
+        keywords
+      }}} = data
 
       return (
         <div>
+          {/* https://github.com/nfl/react-helmet#example */}
           <Helmet
-            title="Seattle Developer's Cooperative"
+            title={ title }
             meta={[
-              { name: 'description', content: 'Great web developers providing fast, effective, and robust websites' },
-              { name: 'keywords', content: 'web developer, developers, react, javascript, seattle, cooperative' },
+              { name: 'description', content: description },
+              { name: 'keywords', content: keywords },
+              { property: 'og:image', content: `${siteUrl}${logoImage}`}
             ]}
-          />
+          >
+            <link
+              rel="apple-touch-icon"
+              href={`${siteUrl}${logoImage}`}
+            />
+          </Helmet>
           <Header />
           <article className="home_page">
             <Helmet
@@ -111,6 +130,7 @@ export const IndexPage = ({ children }) => (
               latest React app we&apos;re here to see your vision through to the end.</p>
 
               <h2>Who we are</h2>
+              <h3>Current Members</h3>
 
               <Member
                 name="Andy Jacobs"
@@ -119,6 +139,22 @@ export const IndexPage = ({ children }) => (
                 mastodon="https://social.coop/@funwhilelost"
                 image={andyImage}
               />
+
+              <Member
+                name="Mike Lyons"
+                github="https://github.com/mikelyons"
+                linkedin="https://www.linkedin.com/in/mrlyons/"
+                image={mikeImage}
+              />
+
+              <Member
+                name="Ink Brownell"
+                github="https://github.com/InkBrownell"
+                linkedin="https://www.linkedin.com/in/ink-brownell-39146b160/"
+                image={inkImage}
+              />
+
+              <h3>Former Members</h3>
 
               <Member
                 name="Alex Hartle"
@@ -135,11 +171,12 @@ export const IndexPage = ({ children }) => (
               />
 
               <Member
-                name="Mike Lyons"
-                github="https://github.com/mikelyons"
-                linkedin="https://www.linkedin.com/in/mrlyons/"
-                image={mikeImage}
+                name="Morgen Fett"
+                github="https://github.com/morgen-montgomery"
+                linkedin="https://www.linkedin.com/in/morgen-fett/"
+                image={morgenImage}
               />
+
 
               <p>We believe in worker-ownership and democracy at work.</p>
 
