@@ -8,6 +8,7 @@ import andyImage from '../images/andy.jpg'
 import skylerImage from '../images/skyler.jpg'
 import mikeImage from '../images/mike.jpg'
 import inkImage from '../images/ink.jpg'
+import morgenImage from '../images/morgen.jpg'
 import Member from '../components/Member'
 
 import '../styles/index.scss'
@@ -129,6 +130,7 @@ export const IndexPage = ({ children }) => (
               latest React app we&apos;re here to see your vision through to the end.</p>
 
               <h2>Who we are</h2>
+              <h3>Current Members</h3>
 
               <Member
                 name="Andy Jacobs"
@@ -137,6 +139,22 @@ export const IndexPage = ({ children }) => (
                 mastodon="https://social.coop/@funwhilelost"
                 image={andyImage}
               />
+
+              <Member
+                name="Mike Lyons"
+                github="https://github.com/mikelyons"
+                linkedin="https://www.linkedin.com/in/mrlyons/"
+                image={mikeImage}
+              />
+
+              <Member
+                name="Ink Brownell"
+                github="https://github.com/InkBrownell"
+                linkedin="https://www.linkedin.com/in/ink-brownell-39146b160/"
+                image={inkImage}
+              />
+
+              <h3>Former Members</h3>
 
               <Member
                 name="Alex Hartle"
@@ -153,18 +171,12 @@ export const IndexPage = ({ children }) => (
               />
 
               <Member
-                name="Mike Lyons"
-                github="https://github.com/mikelyons"
-                linkedin="https://www.linkedin.com/in/mrlyons/"
-                image={mikeImage}
+                name="Morgen Fett"
+                github="https://github.com/morgen-montgomery"
+                linkedin="https://www.linkedin.com/in/morgen-fett/"
+                image={morgenImage}
               />
 
-              <Member
-                name="Ink Brownell"
-                github="https://github.com/InkBrownell"
-                linkedin="https://www.linkedin.com/in/ink-brownell-39146b160/"
-                image={inkImage}
-              />
 
               <p>We believe in worker-ownership and democracy at work.</p>
 
