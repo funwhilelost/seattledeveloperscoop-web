@@ -4,14 +4,15 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- const path = require("path");
+const path = require("path");
 
- exports.createPages = ({ boundActionCreators, graphql }) => {
-   const { createPage } = boundActionCreators;
+exports.createPages = (gatsbyArgs, pluginArgs) => {
+  const { actions, graphql } = gatsbyArgs;
+  const { createPage } = actions;
 
-   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
 
-   return graphql(`{
+  return graphql(`{
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000

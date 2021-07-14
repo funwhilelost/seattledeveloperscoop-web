@@ -39,7 +39,7 @@ const Footer = () => (
   </div>
 )
 
-export const IndexPage = ({ children }) => (
+const IndexPage = ({ children }) => (
   <StaticQuery
      query={graphql`
       query SiteMetadataLookup {
