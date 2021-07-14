@@ -1,7 +1,7 @@
 {
   "name": "seattldeveloperscoop-web",
   "description": "Seattle Developers Cooperative Website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Andy Jacobs <andy@seattledevelopers.coop>",
   "dependencies": {
     "gatsby": "^3.9.1",
