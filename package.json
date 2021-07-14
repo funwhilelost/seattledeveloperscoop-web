@@ -4,15 +4,15 @@
   "version": "0.1.0",
   "author": "Andy Jacobs <andy@seattledevelopers.coop>",
   "dependencies": {
-    "gatsby": "^2.9.7",
-    "gatsby-plugin-google-analytics": "^2.0.21",
+    "gatsby": "^2.32.13",
+    "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-source-filesystem": "^2.0.41",
-    "gatsby-transformer-remark": "^2.4.0",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby-plugin-sass": "^2.8.0",
+    "gatsby-source-filesystem": "^2.11.1",
+    "gatsby-transformer-remark": "^2.16.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "keywords": [
     "gatsby"
@@ -27,6 +27,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.8.2"
+    "prettier": "^1.19.1"
   }
 }
