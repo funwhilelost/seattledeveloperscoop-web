@@ -1,18 +1,18 @@
 {
   "name": "seattldeveloperscoop-web",
   "description": "Seattle Developers Cooperative Website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Andy Jacobs <andy@seattledevelopers.coop>",
   "dependencies": {
-    "gatsby": "^2.9.7",
-    "gatsby-plugin-google-analytics": "^2.0.21",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-source-filesystem": "^2.0.41",
-    "gatsby-transformer-remark": "^2.4.0",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^3.9.1",
+    "gatsby-plugin-react-helmet": "^4.9.0",
+    "gatsby-plugin-sass": "^4.9.0",
+    "gatsby-source-filesystem": "^3.9.0",
+    "gatsby-transformer-remark": "^4.6.0",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0"
   },
   "keywords": [
     "gatsby"
@@ -22,11 +22,12 @@
   "scripts": {
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "start": "yarn serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.8.2"
+    "prettier": "^2.3.2"
   }
 }
